@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Management System | MCA Assignment</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <h1>Student Registration & Result Portal</h1>
+            <p>Practical Assignment: HTML5, CSS3, & LocalStorage JSON Operations</p>
+        </header>
+
+        <main class="grid-container">
+            <!-- LEFT SIDE: INPUT SECTION -->
+            <section class="input-panel">
+                <div class="card">
+                    <h3>Student Registration Form</h3>
+                    <form id="studentForm">
+                        <div class="field">
+                            <label>Full Name:</label>
+                            <input type="text" id="name" placeholder="Enter name" required>
+                        </div>
+                        <div class="field">
+                            <label>Roll Number:</label>
+                            <input type="text" id="roll" placeholder="Enter roll no" required>
+                        </div>
+                        <div class="field">
+                            <label>Web Technology Marks:</label>
+                            <input type="number" id="marks1" min="0" max="100" required>
+                        </div>
+                        <div class="field">
+                            <label>Database (DBMS) Marks:</label>
+                            <input type="number" id="marks2" min="0" max="100" required>
+                        </div>
+                        <div class="field">
+                            <label>Operating System Marks:</label>
+                            <input type="number" id="marks3" min="0" max="100" required>
+                        </div>
+                        <button type="submit" class="btn-primary">Generate Result</button>
+                    </form>
+                </div>
+            </section>
+
+            <!-- RIGHT SIDE: IMMEDIATE OUTPUT SECTION -->
+            <section class="output-panel">
+                <div class="card" id="resultCard">
+                    <h3>Last Calculated Result</h3>
+                    <div id="liveOutput">
+                        <p class="placeholder-text">Enter details and click 'Generate Result' to see the output here.</p>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- BOTTOM: DATABASE RECORDS -->
+        <section class="records-panel">
+            <div class="card">
+                <h3>All Registered Records (Stored in LocalStorage)</h3>
+                <div class="table-container">
+                    <table id="recordsTable">
+                        <thead>
+                            <tr>
+                                <th>Roll No</th>
+                                <th>Name</th>
+                                <th>Total</th>
+                                <th>%</th>
+                                <th>Status</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody id="tableBody"></tbody>
+                    </table>
+                </div>
+                <button id="clearAll" class="btn-danger">Clear All Database</button>
+                <footer style="margin-top: 30px; text-align: center; font-size: 0.8rem; color: #777; border-top: 1px solid #eee; padding-top: 10px;">
+    Made by: Sahil Shirke | Roll No: 150097926011 | MCA Semester 1
+</footer>
+            </div>
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
